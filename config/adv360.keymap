@@ -44,11 +44,11 @@
 
         layer_keypad {
             bindings = <
- &trans             &trans                &trans            &trans                 &trans             &trans  &trans                                                  &trans  &trans                    &trans                     &trans  &trans  &trans  &trans
- &trans  &kp RG(BACKSPACE)         &kp RA(RC(E))    &kp RA(RC(UP))          &kp RA(RC(T))  &kp RA(RC(ENTER))  &trans                                                   &none  &trans            &kp LEFT_BRACE            &kp RIGHT_BRACE  &trans  &trans  &trans
- &trans  &kp RA(RG(SPACE))      &kp RA(RC(LEFT))  &kp RA(RC(DOWN))      &kp RA(RC(RIGHT))             &trans  &trans  &trans  &trans                  &trans  &trans   &none  &trans          &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &trans  &trans  &trans
- &trans             &trans  &kp RA(RC(RG(LEFT)))     &kp RA(RC(C))  &kp RA(RC(RG(RIGHT)))             &trans   &none   &none  &trans   &none   &none  &trans   &none   &none  &trans      &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
- &trans             &trans                &trans            &trans                 &trans                     &trans  &trans  &trans                  &trans  &trans  &trans          &kp RA(RG(LEFT_BRACKET))  &kp RA(RG(RIGHT_BRACKET))  &trans  &trans  &trans
+ &trans             &trans                &trans            &trans                 &trans             &trans  &trans                                                  &trans  &trans  &trans                    &trans                     &trans  &trans  &trans
+ &trans  &kp RG(BACKSPACE)         &kp RA(RC(E))    &kp RA(RC(UP))          &kp RA(RC(T))  &kp RA(RC(ENTER))  &trans                                                   &none  &trans  &trans            &kp LEFT_BRACE            &kp RIGHT_BRACE  &trans  &trans
+ &trans  &kp RA(RG(SPACE))      &kp RA(RC(LEFT))  &kp RA(RC(DOWN))      &kp RA(RC(RIGHT))             &trans  &trans  &trans  &trans                  &trans  &trans   &none  &trans  &trans          &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &trans  &trans
+ &trans             &trans  &kp RA(RC(RG(LEFT)))     &kp RA(RC(C))  &kp RA(RC(RG(RIGHT)))             &trans   &none   &none  &trans   &none   &none  &trans   &none   &none  &trans  &trans      &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &trans  &trans
+ &trans             &trans                &trans            &trans                 &trans                     &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &kp RA(RG(LEFT_BRACKET))  &kp RG(RA(RIGHT_BRACKET))  &trans  &trans
             >;
         };
 
