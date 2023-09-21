@@ -29,6 +29,36 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        down_5_morph: down_5_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_5_MORPH";
+            bindings =
+                <&kp N5>,
+                <&kp DOWN_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI|MOD_LGUI)>;
+        };
+        up_8_morph: up_8_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_8_MORPH";
+            bindings =
+                <&kp N8>,
+                <&kp UP_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+        right_6_morph: right_6_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_6_MORPH";
+            bindings =
+                <&kp NUMBER_6>,
+                <&kp RIGHT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -49,21 +79,21 @@
 
         keypad {
             bindings = <
-&trans  &trans             &kp RA(RC(RG(LEFT_ARROW)))  &kp RA(RC(UP_ARROW))    &kp RG(RC(RA(RIGHT_ARROW)))  &trans  &kp RA(RC(ENTER))                                                &trans  &trans  &trans  &trans                    &trans                     &trans  &trans
-&trans  &kp LG(BACKSPACE)  &kp RA(RC(LEFT_ARROW))      &kp RA(RC(C))           &kp RA(RC(RIGHT_ARROW))      &trans  &trans                                                           &trans  &trans  &trans  &kp LEFT_BRACE            &kp RIGHT_BRACE            &trans  &trans
-&trans  &kp RG(RA(SPACE))  &kp RA(RC(E))               &kp RA(RC(DOWN_ARROW))  &kp RA(RC(T))                &trans  &trans             &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &trans  &trans
-&trans  &trans             &trans                      &trans                  &trans                       &trans  &none              &none   &trans  &none  &none  &trans  &none   &none   &trans  &trans  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS      &trans  &trans
-&trans  &trans             &trans                      &trans                  &trans                               &trans             &trans  &trans                &trans  &trans  &trans          &trans  &kp RA(RG(LEFT_BRACKET))  &kp RG(RA(RIGHT_BRACKET))  &trans  &trans
+&trans  &trans             &kp RA(RC(RG(LEFT_ARROW)))  &kp RA(RC(UP_ARROW))    &kp RG(RC(RA(RIGHT_ARROW)))  &trans  &kp RA(RC(ENTER))                                                &trans  &trans         &trans      &trans                    &trans                     &trans  &trans
+&trans  &kp LG(BACKSPACE)  &kp RA(RC(LEFT_ARROW))      &kp RA(RC(C))           &kp RA(RC(RIGHT_ARROW))      &trans  &trans                                                           &trans  &trans         &trans      &kp LEFT_BRACE            &kp RIGHT_BRACE            &trans  &trans
+&trans  &kp RG(RA(SPACE))  &kp RA(RC(E))               &kp RA(RC(DOWN_ARROW))  &kp RA(RC(T))                &trans  &trans             &trans  &trans  &none  &none  &trans  &trans  &trans  &kp BACKSPACE  &kp DELETE  &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &trans  &trans
+&trans  &trans             &trans                      &trans                  &trans                       &trans  &none              &none   &trans  &none  &none  &trans  &none   &none   &trans         &trans      &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS      &trans  &trans
+&trans  &trans             &trans                      &trans                  &trans                               &trans             &trans  &trans                &trans  &trans  &trans                 &trans      &kp RA(RG(LEFT_BRACKET))  &kp RG(RA(RIGHT_BRACKET))  &trans  &trans
             >;
         };
 
         NUM {
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans  &trans                                                &trans  &trans  &trans        &trans        &trans        &trans  &trans
-&trans  &trans  &trans          &kp UP_ARROW    &trans           &trans  &none                                                 &none   &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &none   &trans  &trans  &none  &none  &trans  &trans  &none   &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans  &none   &none   &trans  &none  &none  &trans  &none   &none   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&trans  &trans  &trans          &trans          &trans                   &trans  &trans  &trans                &trans  &trans  &trans          &kp NUMBER_0  &kp DOT       &trans        &trans  &trans
+&trans  &trans  &trans           &trans        &trans         &trans  &trans                                                &trans  &trans  &trans           &trans           &trans           &trans  &trans
+&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &trans  &none                                                 &none   &trans  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &trans  &trans
+&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp LCTRL      &trans  &none   &trans  &trans  &none  &none  &trans  &trans  &none   &trans  &kp KP_NUMBER_4  &kp LANG5        &kp KP_N6        &trans  &trans
+&trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &trans  &none   &none   &trans  &none  &none  &trans  &none   &none   &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans           &trans        &trans                 &trans  &trans  &trans                &trans  &trans  &trans          &kp KP_NUMBER_0  &kp DOT          &trans           &trans  &trans
             >;
         };
 
