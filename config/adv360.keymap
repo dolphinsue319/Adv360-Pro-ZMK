@@ -32,24 +32,6 @@
     };
 
     macros {
-        pared_BRACE: pared_BRACE {
-            compatible = "zmk,behavior-macro";
-            label = "pared_BRACE";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
-        };
-        pared_BRACKET: pared_BRACKET {
-            compatible = "zmk,behavior-macro";
-            label = "pared_BRACKET";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
-        };
-        pared_PARENTHESIS: pared_PARENTHESIS {
-            compatible = "zmk,behavior-macro";
-            label = "pared_PARENTHESIS";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
-        };
     };
 
     keymap {
@@ -67,11 +49,11 @@
 
         keypad {
             bindings = <
-&trans  &trans             &kp RA(RC(RG(LEFT_ARROW)))  &kp RA(RC(UP_ARROW))    &kp RG(RC(RA(RIGHT_ARROW)))  &trans  &kp RA(RC(ENTER))                                                &trans  &trans  &trans              &trans                    &trans                     &trans  &trans
-&trans  &kp LG(BACKSPACE)  &kp RA(RC(LEFT_ARROW))      &kp RA(RC(C))           &kp RA(RC(RIGHT_ARROW))      &trans  &trans                                                           &trans  &trans  &pared_BRACE        &kp LEFT_BRACE            &kp RIGHT_BRACE            &trans  &trans
-&trans  &kp RG(RA(SPACE))  &kp RA(RC(E))               &kp RA(RC(DOWN_ARROW))  &kp RA(RC(T))                &trans  &trans             &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &pared_BRACKET      &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &trans  &trans
-&trans  &trans             &trans                      &trans                  &trans                       &trans  &none              &none   &trans  &none  &none  &trans  &none   &none   &trans  &pared_PARENTHESIS  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS      &trans  &trans
-&trans  &trans             &trans                      &trans                  &trans                               &trans             &trans  &trans                &trans  &trans  &trans          &trans              &kp RA(RG(LEFT_BRACKET))  &kp RG(RA(RIGHT_BRACKET))  &trans  &trans
+&trans  &trans             &kp RA(RC(RG(LEFT_ARROW)))  &kp RA(RC(UP_ARROW))    &kp RG(RC(RA(RIGHT_ARROW)))  &trans  &kp RA(RC(ENTER))                                                &trans  &trans  &trans  &trans                    &trans                     &trans  &trans
+&trans  &kp LG(BACKSPACE)  &kp RA(RC(LEFT_ARROW))      &kp RA(RC(C))           &kp RA(RC(RIGHT_ARROW))      &trans  &trans                                                           &trans  &trans  &trans  &kp LEFT_BRACE            &kp RIGHT_BRACE            &trans  &trans
+&trans  &kp RG(RA(SPACE))  &kp RA(RC(E))               &kp RA(RC(DOWN_ARROW))  &kp RA(RC(T))                &trans  &trans             &trans  &trans  &none  &none  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET          &kp RIGHT_BRACKET          &trans  &trans
+&trans  &trans             &trans                      &trans                  &trans                       &trans  &none              &none   &trans  &none  &none  &trans  &none   &none   &trans  &trans  &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS      &trans  &trans
+&trans  &trans             &trans                      &trans                  &trans                               &trans             &trans  &trans                &trans  &trans  &trans          &trans  &kp RA(RG(LEFT_BRACKET))  &kp RG(RA(RIGHT_BRACKET))  &trans  &trans
             >;
         };
 
