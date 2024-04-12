@@ -14,54 +14,45 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         hml: home_row_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LAYER";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
         down_5_morph: down_5_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOWN_5_MORPH";
-            bindings =
-                <&kp N5>,
-                <&kp DOWN_ARROW>;
+            bindings = <&kp N5>, <&kp DOWN_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI|MOD_LGUI)>;
         };
+
         up_8_morph: up_8_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_8_MORPH";
-            bindings =
-                <&kp N8>,
-                <&kp UP_ARROW>;
+            bindings = <&kp N8>, <&kp UP_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
         right_6_morph: right_6_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "RIGHT_6_MORPH";
-            bindings =
-                <&kp NUMBER_6>,
-                <&kp RIGHT_ARROW>;
+            bindings = <&kp NUMBER_6>, <&kp RIGHT_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
-    };
-
-    macros {
     };
 
     keymap {
@@ -69,11 +60,11 @@
 
         default_layer {
             bindings = <
-&gresc             &kp N1     &kp N2          &kp N3       &kp N4       &kp N5  &kp NUMBER_6                                                                                                                             &trans                   &kp NUMBER_6  &kp N7             &kp N8        &kp N9           &kp N0           &mo 3
-&kp EQUAL          &kp Q      &kp W           &kp E        &kp R        &kp T   &mo 2                                                                                                                                    &mo 2                    &kp Y         &kp U              &kp I         &kp O            &kp P            &kp BSLH
-&kp MINUS          &kp A      &hm LEFT_ALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &mo 1                   &mt LEFT_ALT TAB      &kp LC(LA(LS(LEFT_COMMAND)))  &none  &none  &kp RC(RA(RS(LGUI)))      &mt RIGHT_ALT GRAVE  &mo 1                    &kp H         &hm RIGHT_SHIFT J  &hm RCTRL K   &hm RIGHT_ALT L  &kp SEMICOLON    &kp SQT
-&mo 2              &kp Z      &kp X           &hml 2 C     &hml 1 V     &kp B   &none                   &none                 &kp LG(LC(LEFT_ALT))          &none  &none  &kp RG(RC(RIGHT_ALT))     &none                &none                    &kp N         &hml 1 M           &hml 2 COMMA  &kp DOT          &kp FSLH         &kp BACKSPACE
-&kp RC(RA(SPACE))  &kp RG(Z)  &kp RG(X)       &kp RG(C)    &kp RG(V)            &mt LEFT_COMMAND ENTER  &mt LEFT_SHIFT SPACE  &mt LEFT_CONTROL BACKSPACE                  &mt RIGHT_CONTROL DELETE  &kp RIGHT_SHIFT      &mt RIGHT_COMMAND SPACE                &kp LEFT_ARROW     &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp CAPS
+&gresc             &kp N1     &kp N2          &kp N3       &kp N4       &kp N5  &kp NUMBER_6                                                                                                                         &trans                   &kp NUMBER_6  &kp N7             &kp N8        &kp N9           &kp N0           &mo 3
+&kp EQUAL          &kp Q      &kp W           &kp E        &kp R        &kp T   &mo 2                                                                                                                                &mo 2                    &kp Y         &kp U              &kp I         &kp O            &kp P            &kp BSLH
+&kp MINUS          &kp A      &hm LEFT_ALT S  &hm LCTRL D  &hm LSHFT F  &kp G   &mo 1                   &kp TAB               &kp LC(LA(LS(LEFT_COMMAND)))  &none  &none  &kp RC(RA(RS(LGUI)))      &kp GRAVE        &mo 1                    &kp H         &hm RIGHT_SHIFT J  &hm RCTRL K   &hm RIGHT_ALT L  &kp SEMICOLON    &kp SQT
+&mo 2              &kp Z      &kp X           &hml 2 C     &hml 1 V     &kp B   &none                   &none                 &kp LG(LC(LEFT_ALT))          &none  &none  &kp RG(RC(RIGHT_ALT))     &none            &none                    &kp N         &hml 1 M           &hml 2 COMMA  &kp DOT          &kp FSLH         &kp BACKSPACE
+&kp RC(RA(SPACE))  &kp RG(Z)  &kp RG(X)       &kp RG(C)    &kp RG(V)            &mt LEFT_COMMAND ENTER  &mt LEFT_SHIFT SPACE  &mt LEFT_CONTROL BACKSPACE                  &mt RIGHT_CONTROL DELETE  &kp RIGHT_SHIFT  &mt RIGHT_COMMAND SPACE                &kp LEFT_ARROW     &kp UP_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp CAPS
             >;
         };
 
@@ -89,11 +80,11 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans           &trans        &trans         &trans  &trans                                                &trans  &trans  &trans           &trans           &trans           &trans  &trans
-&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &trans  &none                                                 &none   &trans  &kp KP_NUMBER_7  &up_8_morph      &kp KP_N9        &trans  &trans
-&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp LCTRL      &trans  &none   &trans  &trans  &none  &none  &trans  &trans  &none   &trans  &kp KP_NUMBER_4  &down_5_morph    &right_6_morph   &trans  &trans
-&trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &trans  &none   &none   &trans  &none  &none  &trans  &none   &none   &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-&trans  &trans  &trans           &trans        &trans                 &trans  &trans  &trans                &trans  &trans  &trans          &kp KP_NUMBER_0  &kp DOT          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                &trans  &trans  &trans           &trans           &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                                 &none   &trans  &kp KP_NUMBER_7  &up_8_morph      &kp KP_N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans  &none  &none  &trans  &trans  &none   &trans  &kp KP_NUMBER_4  &down_5_morph    &right_6_morph   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &none   &trans  &none  &none  &trans  &none   &none   &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                &trans  &trans  &trans          &kp KP_NUMBER_0  &kp DOT          &trans           &trans  &trans
             >;
         };
 
