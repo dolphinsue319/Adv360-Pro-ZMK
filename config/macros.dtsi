@@ -1,3 +1,15 @@
+macro_alt_cmd_r_bk: macro_alt_cmd_r_bk{
+compatible = "zmk,behavior-macro";
+label = "macro_alt_cmd_r_bk";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LEFT_COMMAND>, <&kp RIGHT_BRACKET>;
+};
+macro_alt_cmd_l_bk: macro_alt_cmd_l_bk{
+compatible = "zmk,behavior-macro";
+label = "macro_alt_cmd_l_bk";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LEFT_COMMAND>, <&kp LEFT_BRACKET>;
+};
 macro_cmd_v: macro_cmd_v{
 compatible = "zmk,behavior-macro";
 label = "macro_cmd_v";
