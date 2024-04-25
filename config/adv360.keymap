@@ -51,7 +51,7 @@
         layer_keypad {
             bindings = <
  &trans                &trans  &macro_alt_ctrl_cmd_l  &macro_alt_ctrl_up  &macro_cmd_ctrl_alt_r  &trans            &macro_alt_ctrl_enter                                                  &trans  &trans  &trans                &trans                 &trans  &trans  &trans
- &trans  &macro_cmd_backspace   &macro_alt_ctrl_left   &macro_alt_ctrl_c                 &trans  &trans                           &trans                                                  &trans  &trans  &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans
+ &trans  &macro_cmd_backspace   &macro_alt_ctrl_left   &macro_alt_ctrl_c                  &none  &trans                           &trans                                                  &trans  &trans  &trans        &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans
  &trans  &macro_cmd_alt_space                 &trans              &trans                 &trans  &trans                           &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans      &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &trans  &trans
  &trans                &trans                 &trans              &trans                 &trans  &trans                                           &trans                  &trans                  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
  &trans                &trans                 &trans              &trans                 &trans                                   &trans  &trans  &trans                  &trans  &trans  &trans          &trans   &macro_alt_cmd_l_bk    &macro_alt_cmd_r_bk  &trans  &trans
