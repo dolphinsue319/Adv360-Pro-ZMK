@@ -1,3 +1,15 @@
+macro_alt_ctrl_up: macro_alt_ctrl_up{
+compatible = "zmk,behavior-macro";
+label = "macro_alt_ctrl_up";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LCTRL>, <&kp UP>;
+};
+macro_alt_ctrl_cmd_bc: macro_alt_ctrl_cmd_bc{
+compatible = "zmk,behavior-macro";
+label = "macro_alt_ctrl_cmd_bc";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LCTRL>, <&kp LEFT_COMMAND>, <&kp BACKSPACE>;
+};
 macro_alt_ctrl_enter: macro_alt_ctrl_enter{
 compatible = "zmk,behavior-macro";
 label = "macro_alt_ctrl_enter";
